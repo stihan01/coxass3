@@ -49,11 +49,11 @@ public class BasicGFSurfer extends AdvancedRobot {
 		setColors(Color.BLUE, Color.BLACK, Color.YELLOW);
 		lateralDirection = 1;
 		lastEnemyVelocity = 0;
-		
+		//#if WaveSurfing
         _enemyWaves = new ArrayList();
         _surfDirections = new ArrayList();
         _surfAbsBearings = new ArrayList();
-
+        //#endif
         setAdjustGunForRobotTurn(true);
         setAdjustRadarForGunTurn(true);
 
