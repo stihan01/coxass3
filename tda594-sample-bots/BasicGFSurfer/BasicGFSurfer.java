@@ -98,7 +98,7 @@ public class BasicGFSurfer extends AdvancedRobot {
 
         updateWaves();
         doSurfing();
-
+        //#if GuessFactorTargeting
 		double enemyAbsoluteBearing = getHeadingRadians() + e.getBearingRadians();
 		double enemyDistance = e.getDistance();
 		double enemyVelocity = e.getVelocity();
@@ -119,6 +119,7 @@ public class BasicGFSurfer extends AdvancedRobot {
 			addCustomEvent(wave);
 		}
 		setTurnRadarRightRadians(Utils.normalRelativeAngle(enemyAbsoluteBearing - getRadarHeadingRadians()) * 2);
+		//#endif
     }
 
     public void updateWaves() {
