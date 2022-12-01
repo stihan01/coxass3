@@ -64,6 +64,7 @@ public class BasicGFSurfer extends AdvancedRobot {
     }
 
     public void onScannedRobot(ScannedRobotEvent e) {
+    	//#if WaveSurfing
         _myLocation = new Point2D.Double(getX(), getY());
 
         double lateralVelocity = getVelocity()*Math.sin(e.getBearingRadians());
@@ -98,6 +99,7 @@ public class BasicGFSurfer extends AdvancedRobot {
 
         updateWaves();
         doSurfing();
+        //#endif
         //#if GuessFactorTargeting
 		double enemyAbsoluteBearing = getHeadingRadians() + e.getBearingRadians();
 		double enemyDistance = e.getDistance();
